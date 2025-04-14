@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden; /* Отключение прокрутки всей страницы */
+}
+
+.chat {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr 100px; /* Шапка, основная часть, подвал */
+  grid-template-columns: 200px 1fr; /* Левая и правая панели */
+}
+
+.header {
+  grid-column: 1 / -1; /* Занимает все колонки */
+  background: #f0f0f0;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar {
+  overflow-y: auto; /* Прокрутка для списка участников */
+  padding: 10px;
+  background: #f8f8f8;
+  border-right: 1px solid #ccc;
+}
+
+.content {
+  overflow-y: auto; /* Прокрутка для сообщений */
+  padding: 10px;
+}
+
+.footer {
+  grid-column: 1 / -1;
+  background: #f0f0f0;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+textarea {
+  resize: none; /* Убрал изменение размера textarea */
+}
